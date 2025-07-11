@@ -15,9 +15,8 @@ from torch import nn
 from nunchaku import NunchakuFluxTransformer2dModel
 from nunchaku.caching.diffusers_adapters.flux import apply_cache_on_transformer
 from nunchaku.caching.utils import cache_context, create_cache_context
-from nunchaku.lora.flux.compose import compose_lora
 from nunchaku.utils import is_turing, load_state_dict_in_safetensors
-
+from .compose import compose_lora
 
 class ComfyFluxWrapper(nn.Module):
     def __init__(self, model: NunchakuFluxTransformer2dModel, config):
